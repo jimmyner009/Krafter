@@ -1,0 +1,77 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Content Remove="Properties\launchSettings.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<!-- Background Jobs -->
+		<PackageReference Include="TickerQ" Version="2.4.0" />
+		<PackageReference Include="TickerQ.Dashboard" Version="2.4.0" />
+		<PackageReference Include="TickerQ.EntityFrameworkCore" Version="2.4.0" />
+
+		<!-- Authentication & Identity -->
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.5" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="9.0.5" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.5" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="9.0.5" />
+		<PackageReference Include="Microsoft.Extensions.Identity.Core" Version="9.0.5" />
+		<PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="9.0.5" />
+
+		<!-- Database & EF Core -->
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.9">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
+		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="9.0.0" />
+		<PackageReference Include="LinqKit.Microsoft.EntityFrameworkCore" Version="9.0.8" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.DynamicLinq" Version="9.6.5" />
+		<PackageReference Include="EFCore.BulkExtensions" Version="9.0.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="9.0.5" />
+
+		<!-- API & Swagger -->
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.9" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.4" />
+
+		<!-- Validation -->
+		<PackageReference Include="FluentValidation" Version="12.0.0" />
+		<PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.0.0" />
+		<PackageReference Include="ForEvolve.FluentValidation.AspNetCore.Http" Version="1.0.26" />
+		
+
+		<!-- External Integrations -->
+		<PackageReference Include="Refit" Version="8.0.0" />
+		<PackageReference Include="Refit.HttpClientFactory" Version="8.0.0" />
+
+		<!-- Utilities -->
+		<PackageReference Include="Mapster" Version="7.4.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\aspire\Krafter.Aspire.ServiceDefaults\Krafter.Aspire.ServiceDefaults.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="Properties\launchSettings.json" />
+	</ItemGroup>
+
+	<!-- Docker Container Configuration -->
+	<PropertyGroup>
+		<ContainerFamily>noble</ContainerFamily>
+		<ContainerRuntimeIdentifier>linux-arm64</ContainerRuntimeIdentifier>
+		<ContainerRepository>ghcr.io/aditikraft/krafter.api</ContainerRepository>
+		<ContainerRegistry>ghcr.io</ContainerRegistry>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ContainerLabel Include="org.opencontainers.image.source" Value="https://github.com/AditiKraft/Krafter" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,22 @@
+name: ASPNETCoreCI
+on:
+  push:
+    branches:
+      - 'win'
+jobs:
+  windows-latest:
+    name: windows-latest
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Setup .NET 9 SDK
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '9.0.x'
+      - name: dotnet run --project ./build/_build.csproj
+        run: |
+          dotnet run --project ./build/_build.csproj
+        env:
+          # Ensure these are set as GitHub repository secrets
+          PAT: ${{ secrets.PAT }}
+          DeploymentWebhookUrl: ${{ secrets.DeploymentWebhookUrl }}

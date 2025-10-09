@@ -1,0 +1,18 @@
+﻿<RadzenStack Orientation="Orientation.Horizontal" Gap="1rem">
+    <RadzenStack Style="width: 10%;" AlignItems="AlignItems.End" JustifyContent="JustifyContent.Right">
+        @if (IsLoading)
+        {
+            <LoadingIndicator Size="LoadingIndicatorSize.ExtraSmall"/>
+        }
+       
+    </RadzenStack>
+    <RadzenStack Style="width: 85%;">
+        <RadzenTextBox @bind-Value="Value" @oninput="OnInputChanged" @onkeydown="OnKeyDown" Placeholder="Enter search text"  />
+        </RadzenStack>
+    <RadzenStack Style="width: 5%;">
+        @if (!IsAutoSearch)
+        {
+            <RadzenButton ButtonStyle="ButtonStyle.Secondary" Icon="search" Disabled="IsLoading" Click="TriggerSearch" />
+        }
+    </RadzenStack>
+</RadzenStack>

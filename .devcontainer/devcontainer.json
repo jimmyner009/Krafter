@@ -1,0 +1,39 @@
+{
+  "name": ".NET Aspire",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:9.0-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/powershell:1": {},
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    }
+  },
+  "hostRequirements": {
+    "cpus": 8,
+    "memory": "32gb",
+    "storage": "64gb"
+  },
+  "onCreateCommand": "dotnet new install Aspire.ProjectTemplates::9.1.0 --force",
+  // Add EF Core tools to postCreateCommand
+  "postCreateCommand": "dotnet restore && dotnet tool install --global dotnet-ef",
+  "postStartCommand": "dotnet dev-certs https --trust",
+  "customizations": {
+    "jetbrains": {
+      "settings": {},
+      "plugins": [
+        "com.github.copilot",
+        "Key Promoter X"
+      ]
+    },
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csdevkit",
+        "GitHub.copilot-chat",
+        "GitHub.copilot"
+      ]
+    }
+  }
+}

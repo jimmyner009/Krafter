@@ -1,0 +1,26 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 170" width="320" height="60" preserveAspectRatio="xMinYMid meet">
+    <defs>
+        <style>
+            .k-nav { fill: #111111; }
+            .k-grn { fill: #33cc77; }
+            .brand { font-family: 'Segoe UI', Roboto, Arial, sans-serif; font-weight: 700; fill: #111111; }
+            .tag { font-family: 'Segoe UI', Roboto, Arial, sans-serif; font-weight: 600; fill: #111111; }
+        </style>
+    </defs>
+
+    <g id="icon" transform="translate(0,6)">
+        <rect x="10" y="8" width="44" height="44" rx="6" class="k-nav" />
+        <polygon points="60,8 104,8 60,52" class="k-grn" />
+
+        <rect x="10" y="58" width="44" height="44" rx="6" class="k-nav" />
+        <polygon points="60,58 104,58 104,102" class="k-grn" />
+
+        <rect x="10" y="108" width="44" height="44" rx="6" class="k-grn" />
+        <rect x="60" y="108" width="44" height="44" rx="6" class="k-nav" />
+    </g>
+
+    <text x="120" y="90" text-anchor="start" dominant-baseline="middle">
+        <tspan class="brand" x="120" dy="-20" font-size="56">Krafter</tspan>
+        <tspan class="tag" x="120" dy="38" font-size="18">by Aditi Kraft</tspan>
+    </text>
+</svg>

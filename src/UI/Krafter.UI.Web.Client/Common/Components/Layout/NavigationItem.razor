@@ -1,0 +1,24 @@
+﻿
+@if (!Example.New && !Example.Updated)
+{
+    <RadzenPanelMenuItem @bind-Expanded=@Expanded Text="@Example.Name" Path="@GetUrl()" aria-label="@Example.Name">
+       
+        <Template>
+            <img src="@($"svg/icons/{Example.Icon}.svg")" />
+            @Example.Name
+        </Template>
+
+        <ChildContent>@ChildContent</ChildContent>
+    </RadzenPanelMenuItem>
+}
+else
+{
+    <RadzenPanelMenuItem @bind-Expanded=@Expanded Text="@Example.Name" Path="@GetUrl()" Icon="@Example.Icon" aria-label="@Example.Name">
+        <Template>
+            @Example.Name
+            <RadzenBadge Text="Updated" Visible=@Example.Updated BadgeStyle="BadgeStyle.Info" />
+            <RadzenBadge Text="New" Visible=@Example.New BadgeStyle="BadgeStyle.Success" />
+        </Template>
+        <ChildContent>@ChildContent</ChildContent>
+    </RadzenPanelMenuItem>
+}

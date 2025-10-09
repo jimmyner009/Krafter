@@ -1,0 +1,114 @@
+<svg width="1000" height="700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font: bold 20px sans-serif; fill: #333; }
+      .subtitle { font: bold 14px sans-serif; fill: #555; }
+      .text { font: 11px sans-serif; fill: #666; }
+      .box { fill: white; stroke: #333; stroke-width: 2; }
+      .client { fill: #e7f3ff; stroke: #0066cc; }
+      .backend { fill: #fff3e0; stroke: #ff9800; }
+      .data { fill: #f3e5f5; stroke: #9c27b0; }
+      .infra { fill: #e8f5e9; stroke: #4caf50; }
+    </style>
+  </defs>
+  
+  <text x="500" y="30" class="title" text-anchor="middle">Krafter Architecture</text>
+  
+  <!-- Client Layer -->
+  <rect x="50" y="60" width="400" height="180" rx="8" class="client box"/>
+  <text x="250" y="85" class="subtitle" text-anchor="middle">Client Layer</text>
+  
+  <rect x="70" y="100" width="170" height="120" rx="5" class="box"/>
+  <text x="155" y="120" class="subtitle" text-anchor="middle">Blazor WASM</text>
+  <text x="80" y="140" class="text">- Feature-based UI</text>
+  <text x="80" y="155" class="text">- Radzen Components</text>
+  <text x="80" y="170" class="text">- Kiota API Client</text>
+  <text x="80" y="185" class="text">- Permission-based</text>
+  <text x="80" y="200" class="text">- SignalR Hub</text>
+  
+  <rect x="260" y="100" width="170" height="120" rx="5" class="box"/>
+  <text x="345" y="120" class="subtitle" text-anchor="middle">Blazor Server</text>
+  <text x="270" y="140" class="text">- Prerendering</text>
+  <text x="270" y="155" class="text">- Static Assets</text>
+  <text x="270" y="170" class="text">- Server-side API</text>
+  <text x="270" y="185" class="text">- Auth Persistence</text>
+  
+  <!-- Backend Layer -->
+  <rect x="50" y="270" width="400" height="200" rx="8" class="backend box"/>
+  <text x="250" y="295" class="subtitle" text-anchor="middle">Backend API (VSA)</text>
+  
+  <rect x="70" y="310" width="170" height="140" rx="5" class="box"/>
+  <text x="155" y="330" class="subtitle" text-anchor="middle">Feature Slices</text>
+  <text x="80" y="350" class="text">Auth / Users / Roles</text>
+  <text x="80" y="365" class="text">Tenants / Products</text>
+  <text x="80" y="385" class="text">Each slice:</text>
+  <text x="85" y="400" class="text">- Request/Response</text>
+  <text x="85" y="415" class="text">- Handler + Validator</text>
+  <text x="85" y="430" class="text">- Route registration</text>
+  
+  <rect x="260" y="310" width="170" height="140" rx="5" class="box"/>
+  <text x="345" y="330" class="subtitle" text-anchor="middle">Infrastructure</text>
+  <text x="270" y="350" class="text">- EF Core (PostgreSQL)</text>
+  <text x="270" y="365" class="text">- Multi-tenancy</text>
+  <text x="270" y="380" class="text">- Background Jobs</text>
+  <text x="270" y="395" class="text">- JWT Auth</text>
+  <text x="270" y="410" class="text">- Permissions</text>
+  <text x="270" y="425" class="text">- SignalR Hub</text>
+  
+  <!-- Data Layer -->
+  <rect x="50" y="500" width="400" height="150" rx="8" class="data box"/>
+  <text x="250" y="525" class="subtitle" text-anchor="middle">Data and Services</text>
+  
+  <rect x="70" y="540" width="110" height="90" rx="5" class="box"/>
+  <text x="125" y="560" class="subtitle" text-anchor="middle">Databases</text>
+  <text x="80" y="580" class="text">- Krafter DB</text>
+  <text x="80" y="595" class="text">- Tenant DB</text>
+  <text x="80" y="610" class="text">- Jobs DB</text>
+  
+  <rect x="200" y="540" width="110" height="90" rx="5" class="box"/>
+  <text x="255" y="560" class="subtitle" text-anchor="middle">Cache/Jobs</text>
+  <text x="210" y="580" class="text">- Redis Cache</text>
+  <text x="210" y="595" class="text">- TickerQ Jobs</text>
+  <text x="210" y="610" class="text">- LocalStorage</text>
+  
+  <rect x="330" y="540" width="110" height="90" rx="5" class="box"/>
+  <text x="385" y="560" class="subtitle" text-anchor="middle">External</text>
+  <text x="340" y="580" class="text">- Google OAuth</text>
+  <text x="340" y="595" class="text">- SMTP Email</text>
+  <text x="340" y="610" class="text">- Telemetry</text>
+  
+  <!-- Orchestration -->
+  <rect x="520" y="60" width="430" height="180" rx="8" class="infra box"/>
+  <text x="735" y="85" class="subtitle" text-anchor="middle">Orchestration and DevOps</text>
+  
+  <rect x="540" y="100" width="190" height="120" rx="5" class="box"/>
+  <text x="635" y="120" class="subtitle" text-anchor="middle">.NET Aspire</text>
+  <text x="550" y="140" class="text">- AppHost</text>
+  <text x="550" y="155" class="text">- ServiceDefaults</text>
+  <text x="550" y="170" class="text">- OpenTelemetry</text>
+  <text x="550" y="185" class="text">- Service Discovery</text>
+  <text x="550" y="200" class="text">- Health Checks</text>
+  
+  <rect x="750" y="100" width="180" height="120" rx="5" class="box"/>
+  <text x="840" y="120" class="subtitle" text-anchor="middle">CI/CD</text>
+  <text x="760" y="140" class="text">- NUKE Build</text>
+  <text x="760" y="155" class="text">- GitHub Actions</text>
+  <text x="760" y="170" class="text">- Docker Containers</text>
+  <text x="760" y="185" class="text">- Auto Deployment</text>
+  
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+  
+  <line x1="250" y1="240" x2="250" y2="270" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="260" y="260" class="text">HTTPS/SignalR</text>
+  
+  <line x1="250" y1="470" x2="250" y2="500" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="260" y="490" class="text">EF Core</text>
+  
+  <line x1="520" y1="150" x2="450" y2="150" stroke="#666" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="455" y="145" class="text">Orchestrates</text>
+</svg>
