@@ -9,6 +9,9 @@ jobs:
   ubuntu-latest:
     name: ubuntu-latest
     runs-on: ubuntu-latest
+    permissions:
+      packages: write   # ✅ only allow writing to GitHub Packages
+      contents: read  
     steps:
       - uses: actions/checkout@v1
       - name: Setup .NET 9 SDK
@@ -20,5 +23,5 @@ jobs:
           dotnet run --project ./build/_build.csproj
         env:
           # Ensure these are set as GitHub repository secrets
-          PAT: ${{ secrets.PAT }}
+          PAT: ${{ secrets.GITHUB_TOKEN }}
           DeploymentWebhookUrl: ${{ secrets.DeploymentWebhookUrl }}
