@@ -19,7 +19,7 @@ var cache = builder.AddGarnet("cache")
         keysChangedThreshold: 100)
     .WithArgs("--lua", "true")
     ; 
-var backend = builder.AddProject<Projects.Backend>("backend")
+var backend = builder.AddProject<Projects.Backend>("krafter-api")
     .WithReference(database);
 
 builder.AddProject<Projects.Krafter_UI_Web>("krafter-ui-web")
